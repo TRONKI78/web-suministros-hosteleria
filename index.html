@@ -221,12 +221,9 @@ button { font: inherit; letter-spacing: inherit; }
 .about { background: var(--stage); color: var(--stage-fg); }
 .about .eyebrow { display: block; margin-bottom: 12px; }
 .about .sec-head p { color: var(--stage-muted); }
-.about-intro { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 48px; align-items: start; }
-.founder { margin: 0; display: grid; gap: 14px; justify-items: start; }
-.founder .photo {
-  width: 180px; height: auto; aspect-ratio: 1; border-radius: 50%; object-fit: cover; display: block;
-  padding: 5px; background: #000; border: 3px solid #b9bbc1; box-shadow: 0 0 0 1px var(--stage-line);
-}
+.about-intro { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 48px; align-items: start; }
+.founder { margin: 0; display: grid; gap: 14px; }
+.founder .photo { width: 100%; height: auto; display: block; border-radius: var(--radius-card); }
 .founder figcaption { display: grid; gap: 2px; }
 .founder b { font-family: var(--font-display); font-size: 21px; font-weight: 600; }
 .founder span { font-size: 14px; color: var(--stage-muted); }
@@ -264,8 +261,7 @@ button { font: inherit; letter-spacing: inherit; }
 }
 @media (max-width: 720px) {
   .about-intro { grid-template-columns: minmax(0, 1fr); gap: 28px; }
-  .founder { grid-template-columns: auto minmax(0, 1fr); align-items: center; }
-  .founder .photo { width: 104px; padding: 3px; border-width: 2px; }
+  .founder { max-width: 420px; }
   .about-card { padding: 28px 24px; }
 }
 @media (max-width: 400px) { .pill { white-space: normal; text-align: center; } .trust-cta, .help, .notsold { padding: 22px 18px; } }
@@ -539,7 +535,7 @@ footer nav a { color: var(--muted); }
 
       <div class="about-intro">
         <figure class="founder">
-          <img class="photo" src="img/nelo-roig.jpg" width="480" height="480" alt="Nelo Roig, gerente de Suministros Hostelería" loading="lazy" decoding="async">
+          <img class="photo" src="img/nelo-roig.jpg" width="720" height="836" alt="Nelo Roig, gerente de Suministros Hostelería" loading="lazy" decoding="async">
           <figcaption><b>Nelo Roig</b><span>Gerente</span></figcaption>
         </figure>
         <div class="about-text">
